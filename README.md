@@ -35,3 +35,24 @@ iv) Targeted Marketing For Appliance Developing Companies – The prediction of 
 rating could actually help companies to predict that how many people would be possibly
 opting to upgrade to a appliance with a higher star rating, so they can accordingly target
 their sales.
+
+# Work Done
+
+The primary goal is to help out people to identify and understand their energy spending. The user would be able to identify how much energy is consumed by each of their household appliances. In, case the energy consumed by the appliance is more then what it should be really consuming, leading to the increase in overall cost of energy. For, which we started with exploring the field of Smart Grid, what it really is, what sort of hardware is required, and what sort of data is being generated, etc. Since analytics from data science is next big thing, we thought of finding the solution through analytics. 
+For which we started exploring for public energy datasets. We came across many of them like:- REDD, GREEND, EMBED, AMPds, etc. These datasets comes under eventless categories, containing aggregated energy consumption, which makes them compatible for using them concurrently for both as testing and training data. 
+
+The characteristics of the dataset are the key for the approach towards the solution. So, below mentioned are the characteristics that are usually watched carefully for each
+dataset.
+1. Released Year
+2. Country
+3. Total number of household considered
+4. Continuous — C or Non continuous — NC data, i.e, whether the data was received in successive time intervals, or does it had more gaps then specified.
+5. Event based — EB or Event-less — EL data
+6. Varieties of smart meters used for the purpose of data collection (aggregate—A,
+individual circuit—IC, and if a list of power event labels is available—LE)
+7. Features of electric energy:-(current — I, voltage — V, active power — P, reactive
+power — Q, apparent power — S), and
+8. Time resolution
+
+
+
