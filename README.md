@@ -55,8 +55,7 @@ dataset.
 Implementing the raw data set on the NILM toolkit, which provides us with the FHMM and CO for the implementation. We considered CO for our experiment, to find
 out the energy dissaggregation of each appliance and energy consumed by each of them.
 Combinatorial Optimization helps in finding the optimal set of combination of appliance states, which further minimises the difference between the sum of the predicted appliance power and the observed aggregate power, in order to a set of appliance models.
-Each time slice is assumed to be independent in CO. For the measuring the accuracy of which we considered two appliances:- Fridge and Microwave, for which we got the
-accuracy as 58% and 66%. Further for the improvement in terms of accuracy we started with preprocessing of our data where we followed below mentioned strategies:-
+Each time slice is assumed to be independent in CO. For the measuring the accuracy of which we considered two appliances:- Fridge and Microwave/Ovan. Further for the improvement in terms of accuracy we started with preprocessing of our data where we followed below mentioned strategies:-
 
 1. Detection of gaps in the dataset - There can be a certain amount of gap which is being generated when the sensors are turned off and then on. So, we can remove
 gaps, so as to get an contiguous stream of data.
