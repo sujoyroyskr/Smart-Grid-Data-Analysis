@@ -46,13 +46,31 @@ dataset.
 1. Released Year
 2. Country
 3. Total number of household considered
-4. Continuous — C or Non continuous — NC data, i.e, whether the data was received in successive time intervals, or does it had more gaps then specified.
+4. Continuous or Non continuous data, i.e, whether the data was received in successive time intervals, or does it had more gaps then specified.
 5. Event based — EB or Event-less — EL data
-6. Varieties of smart meters used for the purpose of data collection (aggregate—A,
-individual circuit—IC, and if a list of power event labels is available—LE)
-7. Features of electric energy:-(current — I, voltage — V, active power — P, reactive
-power — Q, apparent power — S), and
+6. Varieties of smart meters used for the purpose of data collection (aggregate, individual circuit, and if a list of power event labels is available)
+7. Features of electric energy:-(current, voltage, active power, reactive power, apparent power), and
 8. Time resolution
 
+Implementing the raw data set on the NILM toolkit, which provides us with the FHMM and CO for the implementation. We considered CO for our experiment, to find
+out the energy dissaggregation of each appliance and energy consumed by each of them.
+Combinatorial Optimization helps in finding the optimal set of combination of appliance states, which further minimises the difference between the sum of the predicted appliance power and the observed aggregate power, in order to a set of appliance models.
+Each time slice is assumed to be independent in CO. For the measuring the accuracy of which we considered two appliances:- Fridge and Microwave, for which we got the
+accuracy as 58% and 66%. Further for the improvement in terms of accuracy we started with preprocessing of our data where we followed below mentioned strategies:-
 
+1. Detection of gaps in the dataset - There can be a certain amount of gap which is being generated when the sensors are turned off and then on. So, we can remove
+gaps, so as to get an contiguous stream of data.
 
+2. Maintaining Up-Time - Up time is total amount of time for which the sensor was on. It can be obtained by subtracting the first recorded time stamp from last
+recorded time stamp, and further subtraction duration of gaps from it.
+
+3. Normalization of Voltage - Different places have different amount of voltage fluctuations. So, as to have a control over these voltage fluctuations as they can significantly impact for a power draw.
+
+4. Top-k appliances - By considering the top-k energy consuming appliances instead
+of considering all the appliances. As, the disaggregation of the appliances having
+highest consumption provides with the most value. Also, by extracting out the
+remaining appliances can help us in order remove noise and helps us to improve
+our accuracy.
+
+After, pre-processing the data and further implementing it to NILM, we got an improved accuracy for the fridge and microwave to be 63% and 72%. So, finally we are
+having a list of appliances the are being used in a household along with it’s energy consumption.
