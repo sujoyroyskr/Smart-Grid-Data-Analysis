@@ -72,5 +72,4 @@ highest consumption provides with the most value. Also, by extracting out the
 remaining appliances can help us in order remove noise and helps us to improve
 our accuracy.
 
-After, pre-processing the data and further implementing it to NILM, we got an improved accuracy for the fridge and microwave to be 63% and 72%. So, finally we are
-having a list of appliances the are being used in a household along with it’s energy consumption.
+After, pre-processing the data and further implementing it to NILM, we were able to get an improved accuracy. So, finally we are having a list of appliances the are being used in a household along with it’s energy consumption.
